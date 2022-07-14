@@ -1,0 +1,25 @@
+{
+    "name": "topaz-lang",
+    "displayName": "Topaz Lang",
+    "description": "Language support for Topaz",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "topaz",
+            "aliases": ["Topaz", "topaz"],
+            "extensions": [".tz",".topaz"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "topaz",
+            "scopeName": "source.topaz",
+            "path": "./syntaxes/topaz.tmLanguage.json"
+        }]
+    }
+}
