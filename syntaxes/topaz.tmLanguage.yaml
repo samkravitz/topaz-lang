@@ -1,15 +1,41 @@
 $schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 name: Topaz
-patterns: [{ include: "#keywords" }, { include: "#strings" }]
+scopeName: source.topaz
+foldingStartMarker: '\{\s*$'
+foldingStopMarker: '^\s*\}'
+
+patterns:
+  - include: '#keywords'
+  - include: '#constants'
+  - include: '#storage'
+  - include: '#strings'
+  - include: '#comments'
+
 repository:
   keywords:
     patterns:
-      [{ name: keyword.control.topaz, match: \b(if|while|for|return)\b }]
+      - name: keyword.control.topaz
+        match: \b(if|while|for|return|else)\b
+
+  constants:
+    patterns:
+      - name: constant.topaz
+        match: \b(true|false|nil)\b
+
+  storage:
+    patterns:
+      - name: storage.topaz
+        match: \b(fn|class|super|self)\b
 
   strings:
     name: string.quoted.single.topaz
     begin: \'
     end: \'
-    patterns: [{ name: constant.character.escape.topaz, match: \\. }]
+    patterns:
+      - name: constant.character.escape.topaz
+        match: \\.
 
-scopeName: source.topaz
+  comments:
+    name: comment.line.number-sign
+    begin: "#"
+    end: \n
