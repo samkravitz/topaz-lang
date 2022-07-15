@@ -4,7 +4,7 @@
 	"publisher": "skravitz",
 	"displayName": "Topaz Lang",
 	"description": "Language support for Topaz",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.69.0"
 	},
