@@ -21,5 +21,8 @@
             "scopeName": "source.topaz",
             "path": "./syntaxes/topaz.tmLanguage.json"
         }]
-    }
+    },
+	"scripts": {
+		"yaml": "npx js-yaml syntaxes/topaz.tmLanguage.yaml > syntaxes/topaz.tmLanguage.json"
+	}
 }

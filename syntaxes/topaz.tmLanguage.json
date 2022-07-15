@@ -11,15 +11,17 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.topaz",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.topaz",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
 		},
 		"strings": {
-			"name": "string.quoted.double.topaz",
-			"begin": "\"",
-			"end": "\"",
+			"name": "string.quoted.single.topaz",
+			"begin": "\\'",
+			"end": "\\'",
 			"patterns": [
 				{
 					"name": "constant.character.escape.topaz",
