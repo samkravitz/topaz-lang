@@ -36,6 +36,9 @@
 	},
 	"scripts": {
 		"yaml": "npx js-yaml syntaxes/topaz.tmLanguage.yaml > syntaxes/topaz.tmLanguage.json",
-		"deploy": "vsce publish --yarn"
+		"deploy": "npx vsce publish --yarn"
+	},
+	"devDependencies": {
+		"vsce": "^2.9.2"
 	}
 }
