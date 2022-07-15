@@ -39,6 +39,7 @@
 		"deploy": "npx vsce publish minor --yarn"
 	},
 	"devDependencies": {
+		"js-yaml": "^4.1.0",
 		"vsce": "^2.9.2"
 	}
 }
