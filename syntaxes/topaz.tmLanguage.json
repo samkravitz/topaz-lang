@@ -15,7 +15,10 @@
 			"include": "#storage"
 		},
 		{
-			"include": "#strings"
+			"include": "#single_strings"
+		},
+		{
+			"include": "#double_strings"
 		},
 		{
 			"include": "#comments"
@@ -42,14 +45,25 @@
 			"patterns": [
 				{
 					"name": "storage.topaz",
-					"match": "\\b(class|fn)\\b"
+					"match": "\\b(fn|class|super|self)\\b"
 				}
 			]
 		},
-		"strings": {
+		"single_strings": {
 			"name": "string.quoted.single.topaz",
 			"begin": "\\'",
 			"end": "\\'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.topaz",
+					"match": "\\\\."
+				}
+			]
+		},
+		"double_strings": {
+			"name": "string.quoted.double.topaz",
+			"begin": "\\\"",
+			"end": "\\\"",
 			"patterns": [
 				{
 					"name": "constant.character.escape.topaz",

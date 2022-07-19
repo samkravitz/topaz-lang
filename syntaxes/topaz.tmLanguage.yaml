@@ -8,7 +8,8 @@ patterns:
   - include: '#keywords'
   - include: '#constants'
   - include: '#storage'
-  - include: '#strings'
+  - include: '#single_strings'
+  - include: '#double_strings'
   - include: '#comments'
 
 repository:
@@ -27,10 +28,18 @@ repository:
       - name: storage.topaz
         match: \b(fn|class|super|self)\b
 
-  strings:
+  single_strings:
     name: string.quoted.single.topaz
     begin: \'
     end: \'
+    patterns:
+      - name: constant.character.escape.topaz
+        match: \\.
+
+  double_strings:
+    name: string.quoted.double.topaz
+    begin: \"
+    end: \"
     patterns:
       - name: constant.character.escape.topaz
         match: \\.
